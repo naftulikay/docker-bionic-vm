@@ -1,0 +1,22 @@
+---
+dist: trusty
+sudo: false
+
+language: python
+python: 3.6
+
+script:
+  - make test
+
+deploy:
+  provider: script
+  script: |-
+    curl -sSL -H "Content-Type: application/json" --data '{"build": true}' -X POST \
+      https://registry.hub.docker.com/u/naftulikay/bionic-vm/trigger/${DOCKERHUB_TOKEN}/
+  on:
+    branch: master
+
+notifications:
+  email:
+    on_success: never
+    on_failure: never

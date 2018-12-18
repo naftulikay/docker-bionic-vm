@@ -1,0 +1,21 @@
+---
+version: '3'
+services:
+  trusty:
+    build: ./
+    container_name: trusty
+    image: naftulikay/trusty-vm:latest
+    privileged: false
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    stop_grace_period: 1s
+
+  trusty-root:
+    build: ./
+    container_name: trusty-root
+    privileged: true
+    security_opt:
+      - label=disable
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    stop_grace_period: 1s
