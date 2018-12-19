@@ -23,6 +23,6 @@ Licensed at your discretion under either:
  - [Apache License, Version 2.0](./LICENSE-APACHE)
 
  [docker]: https://hub.docker.com/r/naftulikay/bionic-vm/
- [docker.svg]: https://img.shields.io/docker/automated/naftulikay/bionic-vm.svg?maxAge=2592000
+ [docker.svg]: https://img.shields.io/docker/automated/naftulikay/bionic-vm.svg?maxAge=2592001
  [travis]: https://travis-ci.org/naftulikay/docker-bionic-vm
  [travis.svg]: https://travis-ci.org/naftulikay/docker-bionic-vm.svg?branch=master
