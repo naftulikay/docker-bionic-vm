@@ -1,4 +1,9 @@
 ---
-file:
-  '/dev/null':
-    exists: true
+command:
+  # test that python TLS support works
+  python -c 'import urllib2;urllib2.urlopen("https://www.google.com")':
+    exit-status: 0
+
+package:
+  jq:
+    installed: true

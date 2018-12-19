@@ -1,21 +1,12 @@
 ---
 version: '3'
 services:
-  trusty:
+  bionic:
     build: ./
-    container_name: trusty
-    image: naftulikay/trusty-vm:latest
-    privileged: false
-    volumes:
-      - /sys/fs/cgroup:/sys/fs/cgroup:ro
-    stop_grace_period: 1s
-
-  trusty-root:
-    build: ./
-    container_name: trusty-root
+    container_name: bionic
+    image: naftulikay/bionic-vm:latest
+    # systemd will not boot without privileged
     privileged: true
-    security_opt:
-      - label=disable
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
     stop_grace_period: 1s

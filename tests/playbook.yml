@@ -20,7 +20,6 @@
   roles:
     - role: degoss
       goss_file: goss.yml
-      goss_addtl_dirs: [goss.d]
       goss_variables:
         host_selinux: "{{ host_selinux | default(false) | bool }}"
         docker_privileged: "{{ docker_privileged }}"
