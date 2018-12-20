@@ -7,7 +7,7 @@ A lightweight Ubuntu 18.04 Bionic VM in Docker, primarily used for integration t
 The image and container can be built and started like so:
 
 ```
-$ docker build -t naftulikay/bionic-vm:latest
+$ docker build -t naftulikay/bionic-vm:latest ./
 $ docker run -d --name bionic -v /sys/fs/cgroup:/sys/fs/cgroup:ro --privileged \
       naftulikay/bionic-vm:latest
 $ docker exec -it bionic wait-for-boot
