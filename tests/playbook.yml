@@ -16,7 +16,6 @@
 
 - name: goss tests
   hosts: all
-  become: true
   roles:
     - role: degoss
       goss_file: goss.yml

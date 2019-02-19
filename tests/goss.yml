@@ -4,6 +4,14 @@ command:
   python -c 'import urllib2;urllib2.urlopen("https://www.google.com")':
     exit-status: 0
 
+  'sudo ls':
+    exit-status: 0
+
+  'id -u -n':
+    exit-status: 0
+    stdout:
+      - container
+
 package:
   jq:
     installed: true
