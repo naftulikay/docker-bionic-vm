@@ -23,7 +23,7 @@ COPY --chown=root:root bin/systemd-await-target bin/wait-for-boot /usr/local/sbi
 RUN chmod 0700 /sbin/initctl /usr/local/sbin/systemd-await-target /usr/local/sbin/wait-for-boot
 
 # add our privilege escalation utility
-RUN curl -sSL -o /usr/sbin/escalator https://github.com/naftulikay/escalator/releases/download/v1.0.0/escalator-x86_64-unknown-linux-gnu && \
+RUN curl -sSL -o /usr/sbin/escalator https://github.com/naftulikay/escalator/releases/download/v1.0.1/escalator-x86_64-unknown-linux-musl && \
   chmod 7755 /usr/sbin/escalator
 
 # create a container user to simulate shelling into an unprivileged user account by default
