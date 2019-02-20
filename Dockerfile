@@ -19,8 +19,8 @@ RUN perl -p -i -e 's/^(\$ModLoad\s+imklog).*/# $1/g' /etc/rsyslog.conf \
     /lib/systemd/system/multi-user.target.wants/getty.target
 
 COPY --chown=root:root bin/fake-initctl /sbin/initctl
-COPY --chown=root:root bin/systemd-await-target bin/wait-for-boot /usr/local/sbin/
-RUN chmod 0700 /sbin/initctl /usr/local/sbin/systemd-await-target /usr/local/sbin/wait-for-boot
+COPY --chown=root:root bin/wait-for-boot /usr/local/sbin/
+RUN chmod 0700 /sbin/initctl /usr/local/sbin/wait-for-boot
 
 # add our privilege escalation utility
 RUN curl -sSL -o /usr/sbin/escalator https://github.com/naftulikay/escalator/releases/download/v1.0.1/escalator-x86_64-unknown-linux-musl && \
